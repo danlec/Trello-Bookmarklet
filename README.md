@@ -12,7 +12,7 @@ This is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> you
 
  - FogBugz cases
  - JIRA issues
- - GitHub issues
+ - GitHub issues and commits
  - The selected text from an arbitrary URL
 
 The first time you run it on a site, it will walk you through a simple setup:
