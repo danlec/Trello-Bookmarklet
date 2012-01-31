@@ -22,6 +22,11 @@
       // We're looking at a GitHub issue
       name = $("#show_issue .number strong").text() + " " + $("#show_issue .content-title").text();
 
+    } else if ($("#all_commit_comments").length) {
+
+      // We're looking at a GitHub commit
+      name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim()
+
     } else {
 
       // It isn't anything we recognize, but we'll see if we can make something using the selected text
