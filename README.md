@@ -29,4 +29,10 @@ The first time you run it on a site, it will walk you through a simple setup:
 You'll only need to go through those steps once per domain; from then on, you should be able to send your
 issues/cases/whatever directly to Trello in a single click.
 
+The card created in Trello will 
+
+- attempt to use the name of the FogBugz/JIRA/GitHub/etc case
+- include a link to the case in the card description
+- (optionally) include any selected text in the description
+
 **Note:** This basic concept originated with https://github.com/markdrago/cardorizer; this approach doesn't require you to run a server
