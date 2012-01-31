@@ -28,3 +28,5 @@ The first time you run it on a site, it will walk you through a simple setup:
 
 You'll only need to go through those steps once per domain; from then on, you should be able to send your
 issues/cases/whatever directly to Trello in a single click.
+
+**Note:** This basic concept originated with https://github.com/markdrago/cardorizer; this approach doesn't require you to run a server
