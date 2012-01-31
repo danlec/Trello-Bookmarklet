@@ -7,14 +7,12 @@ error:function(){j("You need to authorize Trello",!1,function(){Trello.authorize
 " "+c("#show_issue .content-title").text());var e;g.getSelection?e=""+g.getSelection():document.selection&&document.selection.createRange&&(e=document.selection.createRange().text);e&&(d?f+="\n\n"+e:d=e);d&&a.post("lists/"+b+"/cards",{name:d,desc:f})}])}})(window);
 ```
 
-This is a bookmarklet you can use to add
+This is a bookmarklet you can use to create a card in <a href="https://trello.com">Trello</a> from ...
 
  - FogBugz cases
  - JIRA issues
  - GitHub issues
  - The selected text from an arbitrary URL
-
-to a board in <a href="https://trello.com">Trello</a>
 
 To use the bookmarklet, run the source through a javascript minifier 
 (e.g. the <a href="http://closure-compiler.appspot.com/home">Closure Compiler</a>), 
