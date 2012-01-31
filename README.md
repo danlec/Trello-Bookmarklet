@@ -7,16 +7,12 @@ error:function(){j("You need to authorize Trello",!1,function(){Trello.authorize
 " "+c("#show_issue .content-title").text());var e;g.getSelection?e=""+g.getSelection():document.selection&&document.selection.createRange&&(e=document.selection.createRange().text);e&&(d?f+="\n\n"+e:d=e);d&&a.post("lists/"+b+"/cards",{name:d,desc:f})}])}})(window);
 ```
 
-This is a bookmarklet you can use to create a card in <a href="https://trello.com">Trello</a> from ...
+This is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> you can use to create a card in <a href="https://trello.com">Trello</a> from ...
 
  - FogBugz cases
  - JIRA issues
  - GitHub issues
  - The selected text from an arbitrary URL
-
-To use the bookmarklet, run the source through a javascript minifier 
-(e.g. the <a href="http://closure-compiler.appspot.com/home">Closure Compiler</a>), 
-prepend `javascript:` to the front, and add it as the location of a bookmark.
 
 The first time you run it on a site, it will walk you through a simple setup:
 
@@ -32,5 +28,10 @@ The card created in Trello will
 - attempt to use the name of the FogBugz/JIRA/GitHub/etc case
 - include a link to the case in the card description
 - (optionally) include any selected text in the description
+
+If you modify the unminified bookmarklet, you can re-build it by running the source through a javascript minifier 
+(e.g. the <a href="http://closure-compiler.appspot.com/home">Closure Compiler</a>), 
+and prepending `javascript:` to the front.
+
 
 **Note:** This basic concept originated with https://github.com/markdrago/cardorizer; this approach doesn't require you to run a server
