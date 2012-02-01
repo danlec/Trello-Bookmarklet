@@ -8,6 +8,7 @@ This is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> you
  - JIRA issues
  - GitHub issues and commits
  - The selected text from an arbitrary URL
+ - ... more?  I'm happy to take pull requests that add support for other websites!
 
 The first time you run it on a site, it will walk you through a simple setup:
 
@@ -27,6 +28,5 @@ The card created in Trello will
 If you modify the unminified bookmarklet, you can re-build it by running the source through a javascript minifier 
 (e.g. the <a href="http://closure-compiler.appspot.com/home">Closure Compiler</a>), 
 and prepending `javascript:` to the front.
-
 
 **Note:** This basic concept originated with https://github.com/markdrago/cardorizer; this approach doesn't require you to run a server
