@@ -197,8 +197,8 @@
     function(ev, next) {
       $ = window.jQuery;
 
-      var appKey = store(appKeyName);
-      if(appKey) {
+      var appKey = store(appKeyName) || window[appKeyName];
+      if(appKey && appKey.length == 32) {
         next(appKey);
       }
       else {
@@ -231,8 +231,8 @@
     },
     // Get the list to add cards to, either from local storage or by prompting the user
     function(next) {
-      var idList = store(idListName);
-      if(idList) {
+      var idList = store(idListName) || window[idListName];
+      if(idList && idList.length == 24) {
         next(idList);
       } else {
         Trello.get("members/me/boards", { fields: "name" }, function(boards){
