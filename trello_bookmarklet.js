@@ -27,7 +27,7 @@
       // We're looking at a GitHub commit
       name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
       
-    } else if (jQuery('head meta[content=redmine]').length) {
+    } else if (jQuery('head meta[content=Redmine]').length) {
       
       // We're looking at a redmine issue
       name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
