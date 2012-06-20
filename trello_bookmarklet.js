@@ -25,7 +25,12 @@
     } else if ($("#all_commit_comments").length) {
 
       // We're looking at a GitHub commit
-      name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim()
+      name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
+      
+    } else if (jQuery('head meta[content=redmine]').length) {
+      
+      // We're looking at a redmine issue
+      name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
 
     } else {
 
