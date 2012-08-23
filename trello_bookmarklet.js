@@ -193,7 +193,7 @@
         next(null);
       } else {
         var script = document.createElement("script");
-        script.src = "//code.jquery.com/jquery-1.7.1.min.js";
+        script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
         script.onload = next;
         document.getElementsByTagName("head")[0].appendChild(script);
       }
