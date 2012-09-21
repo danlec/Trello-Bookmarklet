@@ -12,10 +12,10 @@
       // We're looking at a FogBugz case
       name = goBug.ixBug + ": " + goBug.sTitle
 
-    } else if ($("#issue_header_summary").length){
+    } else if ($("#jira").length){
 
       // We're looking at a JIRA case
-      name = $("#key-val").text() + ": " + $("#issue_header_summary").text();
+      name = $("#key-val").text() + ": " + $("#summary-val").text();
 
     } else if ($("#show_issue").length) {
 
