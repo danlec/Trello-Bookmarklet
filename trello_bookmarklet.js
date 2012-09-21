@@ -14,8 +14,13 @@
 
     } else if ($("#jira").length){
 
-      // We're looking at a JIRA case
+      // We're looking at a 5.1+ JIRA case
       name = $("#key-val").text() + ": " + $("#summary-val").text();
+
+    } else if ($("#issue_header_summary").length){
+
+      // We're looking at a JIRA case in an older JIRA installation
+      name = $("#key-val").text() + ": " + $("#issue_header_summary").text();
 
     } else if ($("#show_issue").length) {
 
