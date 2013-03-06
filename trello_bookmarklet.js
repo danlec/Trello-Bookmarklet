@@ -37,6 +37,11 @@
       // We're looking at a redmine issue
       name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
 
+    } else if ($('#header h1')) {
+
+        // We're looking at a RequestTracker (RT) ticket
+        name = $('#header h1').text().trim();
+
     } else {
 
       // It isn't anything we recognize, but we'll see if we can make something using the selected text
