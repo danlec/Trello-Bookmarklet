@@ -37,12 +37,12 @@
       // We're looking at a redmine issue
       name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
 
-    } else if ($('#header h1').text().trim()) {
+    } else if ($('#header h1').length) {
 
         // We're looking at a RequestTracker (RT) ticket
         name = $('#header h1').text().trim();
 
-    } else if ($('h1 .hP')){
+    } else if ($('h1 .hP').length){
         
         // we're looking at an email in Gmail
         name = $('h1 .hP').text().trim();
