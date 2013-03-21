@@ -37,7 +37,7 @@
       // We're looking at a redmine issue
       name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
 
-    } else if ($('#header h1')) {
+    } else if ($('#header h1').text().trim()) {
 
         // We're looking at a RequestTracker (RT) ticket
         name = $('#header h1').text().trim();
@@ -47,7 +47,7 @@
         // we're looking at an email in Gmail
         name = $('h1 .hP').text().trim();
     
-    } 
+    }
     
     else {
         // use page title as card title, taking trello as a "read-later" tool
