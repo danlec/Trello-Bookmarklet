@@ -68,6 +68,11 @@
         
         // we're looking at an email in Gmail
         selection = $('.gs .adP').eq(0).html();
+        selection = selection.replace(/(<br\s*[/]?>|<\/p>|<\/div>|<\/blockquote>)/gi,'\n$1');
+        selection = $(selection).text();
+        if(selection){
+            selection = '------ original content ------\n\n'+selection;
+        }
     
     }
 
