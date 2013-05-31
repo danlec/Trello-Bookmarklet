@@ -62,7 +62,9 @@
       selection = ""+window.getSelection();
     } else if(document.selection && document.selection.createRange) {
       selection = document.selection.createRange().text;
-    } else if ($('.gs .adP').length){
+    } 
+    
+    if (!selection && $('.gs .adP').length){
         
         // we're looking at an email in Gmail
         selection = $('.gs .adP').eq(0).html();
