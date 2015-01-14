@@ -1,6 +1,17 @@
 (function(window){
   var $;
 
+  var get_est_jira_time = function() {
+      var jira_time = $('#tt_single_values_orig').text().trim();
+      var hours = jira_time.match(/[+-]?\d+\.\d+/g);
+
+      if (hours != null && hours.length > 0) {
+          return " (" + hours[0] + ")";
+      } else {
+          return "";
+      }
+  }
+
   /* This is run after we've connected to Trello and selected a list */
   var run = function(Trello, idList) {
     var name;
@@ -20,7 +31,7 @@
     } else if ($("#jira").length){
 
       // We're looking at a 5.1+ JIRA case
-      name = $("#key-val").text() + ": " + $("#summary-val").text();
+      name = $("#key-val").text() + ": " + $("#summary-val").text() +  get_est_jira_time();
 
     } else if ($("#show_issue").length) {
 
