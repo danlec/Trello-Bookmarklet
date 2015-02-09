@@ -271,7 +271,7 @@
         next(idList);
       } else {
         Trello.get("members/me/boards", { fields: "name" }, function(boards){
-          $prompt = overlayPrompt('Which list should cards be sent to?<hr><div class="boards"></div>', false, function(){
+          $prompt = overlayPrompt('Which list should cards be sent to?<hr><div class="boards" style="height:500px;overflow-y:scroll"></div>', false, function(){
             idList = $prompt.find("input:checked").attr("id");
             next(idList);
           })
