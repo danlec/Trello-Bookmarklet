@@ -73,7 +73,20 @@
       selection = ""+window.getSelection();
     } else if(document.selection && document.selection.createRange) {
       selection = document.selection.createRange().text;
+    } 
+    
+    if (!selection && $('.gs .adP').length){
+        
+        // we're looking at an email in Gmail
+        selection = $('.gs .adP').eq(0).html();
+        selection = selection.replace(/(<br\s*[/]?>|<\/p>|<\/div>|<\/blockquote>)/gi,'\n$1');
+        selection = $(selection).text();
+        if(selection){
+            selection = '------ original content ------\n\n'+selection;
+        }
+    
     }
+
 
     // If they've selected text, add it to the name/desc of the card
     if(selection) {
